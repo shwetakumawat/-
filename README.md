@@ -19,16 +19,6 @@
 
 &nbsp;
 
-## Speech to Text
-
-### 百度
-
-在 https://cloud.baidu.com/product/speech 申请API。
-
-文档：http://ai.baidu.com/docs#/ASR-API
-
-
-
 #### Configuration
 
 安装：
@@ -45,10 +35,6 @@ API_KEY = ""
 SECRET_KEY = ""
 ```
 
-(也可以直接使用REST API：[Demo](https://github.com/Baidu-AIP/speech-demo)
-
-
-
 #### Usage
 
 ```python
@@ -63,14 +49,6 @@ speech_to_text_baidu(if_microphone = True)
 
 &nbsp;
 
-### 科大讯飞
-
-在 https://www.xfyun.cn/services/voicedictation 申请API。
-
-文档：https://doc.xfyun.cn/rest_api/index.html
-
-
-
 #### Configuration
 
 在 `speech_to_text_ifly()` 填入 APPID、API_KEY：
@@ -80,10 +58,6 @@ URL = "http://api.xfyun.cn/v1/service/v1/iat"
 APPID = ""
 API_KEY = ""
 ```
-
-要在讯飞管理面板中添加调用方api，否则会报错。
-
-
 
 #### Usage
 
@@ -99,13 +73,6 @@ speech_to_text_ifly(if_microphone = True)
 
 &nbsp;
 
-### SpeechRecognition
-
-使用了Python的语音识别库 [SpeechRecognition](https://pypi.org/project/SpeechRecognition/)
-
-源码：https://github.com/Uberi/speech_recognition
-
-&nbsp;
 
 #### Configuration
 
@@ -115,9 +82,7 @@ speech_to_text_ifly(if_microphone = True)
 
 ```python
 pip install SpeechRecognition
-```
-
-
+``
 
 ##### PyAudio
 
@@ -137,23 +102,7 @@ brew install portaudio	# 重新安装
 sudo pip install pyaudio	# 安装pyaudio
 ```
 
-Reference: https://stackoverflow.com/questions/33851379/pyaudio-installation-on-mac-python-3
-
-
-
 ##### PocketSphinx
-
-[CMU Sphinx](https://cmusphinx.github.io/) 是卡内基梅隆大学开发的开源语音识别引擎，可以离线工作，支持多种语言（包括中文）。
-
-源码：https://github.com/cmusphinx
-
-
-
-[PocketSphinx](https://pypi.org/project/pocketsphinx/) 是 CMU Sphinx 的 Python 封装接口。
-
-源码：https://github.com/cmusphinx/pocketsphinx-python
-
-安装：
 
 ```
 pip install PocketSphinx
